@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="/css/w3.css">
+</head>
+<body>
+
+    <div>
+        <form action="/updatestafffunction" method="post" >
+            <p>registration number<input name="reg_no" placeholder="Pls confirm your reg. no."
+               type="number" required/></p>
+            <p> Surname<input name="surname" type="text" required/></p>
+            <p>Middlename<input name="middlename" type="text" required/></p>
+            <p>Lastname <input name="lastname" type="text" required/></p>
+            <p>Telephone<input type="tel" name="telephone"
+                               placeholder="1236 455 6758" pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
+                               required/></p>
+            <p>Referral/Address<input name="referal" type="text" required/></p>
+            <p>Profession<input name="profession" type="text"/></p>
+            <p><input type="submit" ></p>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

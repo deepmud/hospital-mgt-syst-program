@@ -1,0 +1,108 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="/css/w3.css">
+</head>
+<body>
+<header>
+    <h2>NATIONAL HOSPITAL</h2>
+    <div >
+        <img src="decool.jpg"  style="width:20px;height:20px;"/>
+        logged in
+        <div><a href="/">Log Out</a> </div>
+    </div>
+</header>
+<header>
+    <h2>SLIDE</h2>
+</header>
+<section>
+    <nav>
+        <ul>
+            <li><a href="#">MED RECORDS</a></li>
+            <li><a href="#">PHYSICIAN</a></li>
+            <li><a href="#">BUSARY</a></li>
+            <li><a href="#">ADMIN</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <br><br>
+        <div><a href="/checklastregno"><button>
+            view last registration no.</button> </a></div><br><br>
+
+        <div><a href="/createstaff"><button>Create Staff</button></a></div>
+        <div><br>
+            <form action="/updatestaff" method="get">
+                <input name="reg_no" placeholder="Registration Number" type="number"/>
+                <input type="submit" value="Update Staff">
+            </form>
+        </div><br>
+        <div>
+            <form action="/viewstaff" method="get">
+                <input name="reg_no" placeholder="Registration Number" type="number"
+                       required/>
+                <input type="submit" value="View Staff" >
+            </form>
+        </div><br><br>
+
+
+        <div><a href="/createroles"><button>Create Roles</button></a></div>
+        <div><br>
+            <form action="/updateroles" method="get">
+                <input name="reg_no" placeholder="Role Number" type="number"/>
+                <input type="submit" value="Update Roles" >
+            </form>
+        </div><br>
+        <div>
+            <div><a href="/viewroles"><button>
+                View All Roles.</button> </a></div><p/>
+        </div><br><br>
+
+
+        <div>
+            <form action="/updateEachstaffroles" method="get">
+                <input name="reg_no" placeholder="Registration Number" type="number"/>
+                <input type="submit" value="Add Role to Staff" >
+            </form>
+        </div><br>
+        <div>
+            <form action="/removeEachstaffroles" method="get">
+                <input name="reg_no" placeholder="Registration Number" type="number"
+                       required/>
+                <input type="submit" value="Remove Roles from staff">
+            </form>
+        </div><br>
+        <div>
+            <form action="/viewEachstaffroles" method="get">
+                <input name="reg_no" placeholder="Registration Number" type="number"
+                       required/>
+                <input type="submit" value="View Staff Roles">
+            </form>
+        </div><br><br>
+
+
+        <div>
+            <form action="/viewstafflogindetail" method="get">
+                <input name="reg_no" placeholder="Registration Number" type="number" required/>
+                <input type="submit" value="View Staff Login Detail">
+            </form>
+        </div><br><br>
+    </article>
+    <aside>
+        <div>kdkd</div>
+        <a href="/hospofficialsite">visit hosp official site</a>
+    </aside>
+</section>
+
+<footer>
+    <p>Footer</p>
+</footer>
+</body>
+
+</html>
