@@ -34,12 +34,6 @@ public class StaffDetailServiceInterfaceImpl implements StaffDetailServiceInterf
     public List<MyStaff> findByStaff_id(Integer regno) {
         return staffRepo.findByStaff_id(regno);
     }
-/*
-    public List<MyStaff> findByStaff_i(Integer regno,Integer roleno) {
-        return staffRepo.findByStaff_i( regno,roleno);
-    }
-
- */
 
 
     @Override
@@ -69,7 +63,7 @@ public class StaffDetailServiceInterfaceImpl implements StaffDetailServiceInterf
         roles.add(new MyStaffRoles(2));
 
         MyStaff staff= new MyStaff();
-        staff.setRegno(reg_no);
+        staff.setRegNo(reg_no);
         staff.setRoles(roles);
         staffRepo.save(staff);
     }
@@ -82,11 +76,11 @@ public class StaffDetailServiceInterfaceImpl implements StaffDetailServiceInterf
 
     @Override
     public void updateStaff(
-            Integer reg_no,String surname,String middlename,String lastname,
-            String telephone,String referal, String profession) {
+            Integer regNo, String surName, String middleName, String lastName,
+            String telephone, String referral, String profession) {
 
-        MyStaff Staff= new MyStaff(reg_no,surname,middlename,lastname,telephone,
-                referal,profession,loginRepo.findTopByBy(reg_no));
+        MyStaff Staff= new MyStaff(regNo,surName,middleName,lastName,telephone,
+                referral,profession,loginRepo.findTopByBy(regNo));
 
         MyStaff myStaff = staffRepo.saveAndFlush(Staff);
 
@@ -126,35 +120,3 @@ public class StaffDetailServiceInterfaceImpl implements StaffDetailServiceInterf
         return staff;
     }
 }
-
-
-
-
-
-
-
-/*
-
-    // private StaffBiosRepositories staffRepo;
-    @Modifying
-    @Query(
-            value =
-                    "insert into Users (stafid, , Suname, Middlename,Lastname,telephone," +
-                            "Referal," +
-                            "Professiion)" +
-                            " values (:pleaseer,:pleasee,:please,:pleas,:plea,:ple,:pl,:p)",
-            nativeQuery = true)
-    @Override
-    public StaffBios savestudent(@Param("pleaseer")Integer pleaseer, @Param("pleasee")String pleasee,
-                                 @Param("please")String please, @Param("pleas")String pleas,
-                                 @Param("plea")Long ple, @Param("ple")String pl, @Param("p")String p){
-        StaffBios staffs = new StaffBios(pleaseer,pleasee,please,pleas,ple,pl,p);
-        return save(staffs);
-    }
-
-
-
- */
-
-
-

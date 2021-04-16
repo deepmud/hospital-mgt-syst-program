@@ -1,15 +1,10 @@
 package com.example.demo.domain.loginDetails;
 
-import com.example.demo.domain.myStaff.MyStaff;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "logins")
 public class LoginDetail{
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +14,6 @@ public class LoginDetail{
     @Column(name = "staff_reg_no")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer staffRegNo;
-
 
     public LoginDetail() {
     }
@@ -31,10 +25,7 @@ public class LoginDetail{
         this.staffRegNo = staffRegNo;
 
     }
-
-
-
-    public Integer getSerial_no() {
+   public Integer getSerial_no() {
         return serial_no;
     }
 
@@ -53,6 +44,4 @@ public class LoginDetail{
     public Integer getStaffRegNo() {
         return staffRegNo;
     }
-
-
 }

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name = "mystaffr")
+@Table(name = "staff_role")
 public class MyStaffRoles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,6 +41,5 @@ public class MyStaffRoles {
     public String getRole() {
         return role;
     }
-
 
 }

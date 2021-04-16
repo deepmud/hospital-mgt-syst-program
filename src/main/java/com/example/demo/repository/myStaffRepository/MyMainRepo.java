@@ -20,7 +20,4 @@ public interface MyMainRepo extends MyJpaRepo<MyStaff,Integer> {
     @Query("FROM MyStaff AS rdt INNER JOIN rdt.roles AS cm WHERE rdt.regno = ?1")
     List<MyStaff> findByStaff_id(Integer id);
 
-    //@Query("insert into MyStaff AS rdt INNER JOIN rdt.roles AS cm (rdt.regno,cm.roleNo) values (rdt.regno=?1,cm.roleNo = ?2)")
-    //List<MyStaff> findByStaff_i(Integer regno,Integer roleno);
-
 }
