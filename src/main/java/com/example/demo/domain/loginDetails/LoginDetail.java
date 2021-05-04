@@ -44,4 +44,16 @@ public class LoginDetail{
     public Integer getStaffRegNo() {
         return staffRegNo;
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setStaffRegNo(Integer staffRegNo) {
+        this.staffRegNo = staffRegNo;
+    }
 }

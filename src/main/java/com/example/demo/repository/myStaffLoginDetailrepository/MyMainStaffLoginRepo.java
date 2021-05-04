@@ -18,4 +18,6 @@ public interface MyMainStaffLoginRepo extends MyJpaStaffLoginRepo<LoginDetail,In
     @Query(value = "select (s.username) from LoginDetail s where s.staffRegNo = ?1" )
     String findTopByBy(Integer staffRegNo);
 
+    LoginDetail findByUsername(String username);
+
 }

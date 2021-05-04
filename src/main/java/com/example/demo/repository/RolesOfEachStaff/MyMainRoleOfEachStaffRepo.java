@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface MyMainRoleOfEachStaffRepo extends MyJpaRoleOfEachstaffRepo<MyStaff,Integer> {
 
-    List<MyStaff> findByLastname(String lastname);
+    List<MyStaff> findByLastName(String lastname);
 }

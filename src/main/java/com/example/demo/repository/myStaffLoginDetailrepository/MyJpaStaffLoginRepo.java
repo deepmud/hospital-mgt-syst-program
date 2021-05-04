@@ -6,3 +6,5 @@ import org.springframework.data.repository.NoRepositoryBean;
 @NoRepositoryBean
 public interface MyJpaStaffLoginRepo<T,ID> extends JpaRepository<T,ID> {
 }
+
+

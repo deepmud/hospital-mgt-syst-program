@@ -11,13 +11,13 @@ import java.util.List;
 @Repository
 public interface MyMainRepo extends MyJpaRepo<MyStaff,Integer> {
 
-    List<MyStaff> findByLastname(String lastname);
+    List<MyStaff> findByLastName(String lastName);
 
-    @Query(value="select MAX(s.regno) from MyStaff s")
+    @Query(value="select MAX(s.regNo) from MyStaff s")
     Integer findTopByOrderBy();
 
 
-    @Query("FROM MyStaff AS rdt INNER JOIN rdt.roles AS cm WHERE rdt.regno = ?1")
+    @Query("FROM MyStaff AS rdt INNER JOIN rdt.roles AS cm WHERE rdt.regNo = ?1")
     List<MyStaff> findByStaff_id(Integer id);
 
 }

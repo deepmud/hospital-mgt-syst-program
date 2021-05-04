@@ -16,12 +16,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class StaffDetailServiceInterfaceImpl implements StaffDetailServiceInterface {
 
 
     private final MyMainRepo staffRepo;
-    private MyMainStaffLoginRepo loginRepo;
+    private final MyMainStaffLoginRepo loginRepo;
 
 
     public StaffDetailServiceInterfaceImpl(
@@ -48,7 +48,7 @@ public class StaffDetailServiceInterfaceImpl implements StaffDetailServiceInterf
                 referal,profession,username);
 
         Collection<MyStaffRoles> roles = new ArrayList<>();
-        roles.add(new MyStaffRoles(2));
+        roles.add(new MyStaffRoles(1));
 
         staff.setRoles(roles);
          staffRepo.save(staff);
@@ -109,7 +109,7 @@ public class StaffDetailServiceInterfaceImpl implements StaffDetailServiceInterf
     @Transactional(readOnly = true)
     @Override
     public List<MyStaff> findByLastname(String lastname) {
-        List<MyStaff>  staff = staffRepo.findByLastname(lastname);
+        List<MyStaff>  staff = staffRepo.findByLastName(lastname);
         return staff;
     }
 

@@ -1,6 +1,8 @@
 package com.example.demo.service.myStaffDetaillsService;
 
 import com.example.demo.domain.myStaff.MyStaff;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;

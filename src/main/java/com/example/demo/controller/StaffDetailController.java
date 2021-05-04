@@ -13,17 +13,12 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
 @RestController
-@RequestMapping("/")
 public class StaffDetailController {
 
-    private StaffDetailServiceInterface staffDetailServiceInterface;
-    private StaffLoginDetailsServiceInterface loginDetailsServiceInterface;
-    private StaffRolesServiceInterface rolesServiceInterface;
+    private final StaffDetailServiceInterface staffDetailServiceInterface;
+    private final StaffLoginDetailsServiceInterface loginDetailsServiceInterface;
+    private final StaffRolesServiceInterface rolesServiceInterface;
 
     public StaffDetailController(@Autowired StaffDetailServiceInterface
                                          staffDetailServiceInterface,
@@ -106,13 +101,13 @@ public class StaffDetailController {
 
     @PostMapping("/createstafffunction")
     public String createstafffunction(
-            @RequestParam("surname") String surname,
-            @RequestParam("middlename") String middlename,
-            @RequestParam("lastname") String lastname,
+            @RequestParam("surName") String surname,
+            @RequestParam("middleName") String middlename,
+            @RequestParam("lastName") String lastname,
             @RequestParam("telephone") String telephone,
             @RequestParam("referal") String referal,
             @RequestParam("profession") String profession,
-            @RequestParam("username") String username,
+            @RequestParam("userName") String username,
             @RequestParam("password") String password,
             @RequestParam("confirmpassword") String confirmpassword) {
 

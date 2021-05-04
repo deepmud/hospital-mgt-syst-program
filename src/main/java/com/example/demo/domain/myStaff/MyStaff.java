@@ -99,4 +99,8 @@ public class MyStaff{
     public String getMiddleName() {
         return middleName;
     }
+
+    public Collection<MyStaffRoles> getRoles() {
+        return roles;
+    }
 }

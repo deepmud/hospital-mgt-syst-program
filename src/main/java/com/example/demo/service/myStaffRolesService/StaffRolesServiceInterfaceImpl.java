@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class StaffRolesServiceInterfaceImpl implements StaffRolesServiceInterface {
-    private MyMainStaffRolesRepo myMainStaffRolesRepo;
+    private final MyMainStaffRolesRepo myMainStaffRolesRepo;
 
     public StaffRolesServiceInterfaceImpl(@Autowired MyMainStaffRolesRepo myMainStaffRolesRepo)
     {
