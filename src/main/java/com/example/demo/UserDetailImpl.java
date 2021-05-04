@@ -16,13 +16,12 @@ import java.util.Collections;
 public class UserDetailImpl implements UserDetails {
 
     private LoginDetail loginDetail;
-
-
+    //ll
     public UserDetailImpl(@Autowired LoginDetail loginDetail) {
         this.loginDetail = loginDetail;
     }
 
-    
+
  @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
